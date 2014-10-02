@@ -9,8 +9,7 @@ body {
 }
 	
 img {
- padding: none; 
-position: fixed;
+  position: fixed;
 }
 nav a {
   padding: 10px 10px 10px 10px;
