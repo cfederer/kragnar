@@ -1,5 +1,8 @@
+*{
+ font-family: 'Oswald', sans-serif; 
+}
+
 body {
-  font-family: 'Oswald', sans-serif;
   line-height: 40px;
 	color: #E5E4E2;
   margin: 0;
@@ -37,10 +40,25 @@ nav li a:hover {
 
  nav ul ul { /* lists within lists... */
   position: absolute; /* place them over the top of everything */
-  left: 0; /* align them to the left of the parent list item  - necessary for some older browsers */
-  display: none; /* hide 'em */ 
+  display: none; /* hide 'em */
+   width: 180px;;
 }
 
  nav li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
   display: block; /* show 'em */
+}
+
+.how-to-content {
+  color: #000000;
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.how-to-title {
+  text-align: center;
+}
+
+.how-to-inner-ol {
+  list-style: lower-alpha;
 }
