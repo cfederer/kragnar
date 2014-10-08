@@ -1,0 +1,65 @@
+*{
+ font-family: 'Oswald', sans-serif; 
+}
+
+body {
+  line-height: 40px;
+	color: #E5E4E2;
+  margin: 0;
+}
+	
+#logo-wrapper {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+}
+nav a {
+  padding: 10px 10px 10px 10px;
+  color: #FFFFFF;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+nav ul { /* all lists... */
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  background: #03205A;
+}
+
+ nav li { /* all list items... */
+  list-style: none;
+  padding: 10px 10px 10px 10px;
+  display: inline; /* set the list items left-to-right */
+  position: relative; /* set the origin for child boxes to be positioned from */
+}
+
+nav li a:hover {
+  background-color: #CC252D;
+  transition: .3s background-color;
+}
+
+ nav ul ul { /* lists within lists... */
+  position: absolute; /* place them over the top of everything */
+  display: none; /* hide 'em */
+   width: 180px;;
+}
+
+ nav li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
+  display: block; /* show 'em */
+}
+
+.how-to-content {
+  color: #000000;
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.how-to-title {
+  text-align: center;
+}
+
+.how-to-inner-ol {
+  list-style: lower-alpha;
+}
