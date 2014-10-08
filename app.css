@@ -12,10 +12,14 @@ body {
   margin: 0;
 }
 	
-#logo-wrapper {
+.logo-wrapper {
   padding: 0;
   margin: 0;
-  position: fixed;
+  position: absolute;
+}
+
+.logo-wrapper:hover{
+	border: 5px solid white; 
 }
 
 nav a {
