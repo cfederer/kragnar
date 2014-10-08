@@ -52,7 +52,7 @@ nav a {
   position: absolute; /* place them over the top of everything */
   display: none; /* hide 'em */
   width: 180px;
-  margin-left: 730px; 
+  #margin-left: 730px; 
 }
 
  .links li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
