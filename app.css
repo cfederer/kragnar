@@ -3,7 +3,7 @@
 }
 
 html{
-  background-image: url("/img/vinyl-bg.jpg"); 
+  background-image: url("./img/vinyl-bg.jpg"); 
 }
 
 body {
@@ -17,6 +17,7 @@ body {
   margin: 0;
   position: fixed;
 }
+
 nav a {
   padding: 10px 10px 10px 10px;
   color: #FFFFFF;
