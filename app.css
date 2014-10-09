@@ -14,8 +14,8 @@ body {
 	
 #logo-wrapper {
   position: absolute;
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
 }
 
 #logo:hover{
