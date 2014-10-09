@@ -12,14 +12,14 @@ body {
   margin: 0;
 }
 	
-.logo-wrapper {
-  padding: 0;
-  margin: 0;
+#logo-wrapper {
   position: absolute;
+  padding: none;
+  margin: none;
 }
 
-.logo-wrapper:hover{
-	border: 5px solid white; 
+#logo:hover{
+	border: 5px solid white;
 }
 
 nav a {
@@ -52,7 +52,6 @@ nav a {
   position: absolute; /* place them over the top of everything */
   display: none; /* hide 'em */
   width: 180px;
-  margin-left: 730px; 
 }
 
  .links li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
@@ -92,7 +91,7 @@ nav a {
   margin-right: auto;
   margin-left: auto;
   padding: 20px 20px 200px 20px;
-  background: rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, .9);
   border-radius: 5px;
 }
 
