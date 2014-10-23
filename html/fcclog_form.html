@@ -10,15 +10,15 @@
   <body>
     <h1>FCC Log</h1>
 
-    <form method="post" action="process_fcclog.php">
+    <form class="fcclog-form" method="post" action="process_fcclog.php">
       <p>
         <label for="name">DJ Name(s)</label>
-        <input type="text" id="name" name="name" />
+        <input type="text" id="name" name="name" required="required" />
       </p>
 
       <p>
         <label for="showtimes">Show Times</label>
-        <input type="text" id="showtimes" name="showtimes" />
+        <input type="text" id="showtimes" name="showtimes" required="required"/>
       </p>
 
       <h3>Readings</h3>
@@ -76,7 +76,7 @@
       <p>I played the legal id at the top of the hour.</p>
       <p>
         <label for="signature">Signature</label>
-        <input type="text" id="signature" name="signature" />
+        <input type="text" id="signature" name="signature" required="required" />
       </p>
       
       <p>
