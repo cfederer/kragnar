@@ -8,7 +8,24 @@
     <title>KTRM DJ Website</title>
   </head>
   <body>
-    <h1>FCC Log</h1>
+    <h1>KTRM FCC Log</h1>
+    <p> 
+      DJ Task List 
+      <ul>
+        <li> Check spot logs </li>
+        <li> Take transmitter readings </li>
+        <li> Check dry erase board/bulletin board for messages </li>
+      </ul>
+      Spot Log Key
+      <ul>
+        <li> M100 - Random PSA (Simian/Wavecart) </li>
+        <li> CE - Community Event (Binder) </li>
+        <li> SP - Specialty Show Promo (Binder) </li>
+        <li> KP - KTRM Promo (Binder) </li>
+        <li> U - Underwriting (Binder/Simian/Wavecart) <li>
+        <li> L - Liner (Simian/Wavecart) </li>
+        <li> LG - Legal ID (Simian/Wavecart) </li>
+      </ul>
 
     <form method="post" action="../php/fcclog_form.php">
       <p>
@@ -23,23 +40,23 @@
 
       <h3>Readings</h3>
       <p>
-        <label for="reading1">Reading 1</label>
-        <input type="text" id="reading1" name="reading1" />
+        <label for="PA Volts">PA Volts</label>
+        <input type="text" id="PA_Volts" name="PA_Volts" />
       </p>
 
       <p>
-        <label for="reading2">Reading 2</label>
-        <input type="text" id="reading2" name="reading2" />
+        <label for="PA-I">PA-I</label>
+        <input type="text" id="PA_I" name="PA_I" />
       </p>
 
       <p>
-        <label for="reading3">Reading 3</label>
-        <input type="text" id="reading3" name="reading3" />
+        <label for="PA-Watts">PA-Watts</label>
+        <input type="text" id="Pa_Watts" name="Pa_Watts" />
       </p>
 
       <p>
-        <label for="reading4">Reading 4</label>
-        <input type="text" id="reading4" name="reading4" />
+        <label for="Room Temp">Room Temp</label>
+        <input type="text" id="Room_Temp" name="Room_Temp" />
       </p>
 
       <h3>Times</h3>
@@ -69,8 +86,8 @@
       </p>
 
       <p>
-        <label for="discrepancies">Discrepancies?</label>
-        <textarea id="discrepancies" name="discrepancies"></textarea>
+        <label for="Notes">Notes?</label>
+        <textarea id="Notes" name="Notes"></textarea>
       </p>
 
       <p>I played the legal id at the top of the hour.</p>
