@@ -11,27 +11,27 @@
     <?php
   $name = $_POST['name'];
   $showtimes = $_POST['showtimes']; 
-  $reading1 = '';
-  $reading2 = '';
-  $reading3 = '';
-  $reading4 = '';
+  $PA_Volts = '';
+  $PA_I = '';
+  $Pa_Watts = '';
+  $Room_Temp = '';
   $time1 = '';
   $time2 = '';
   $time3 = '';
   $time4 = '';
   $time5 = '';
-  $discrepancies = '';
-  if(isset($_POST['reading1'])):
-    $reading1 = $_POST['reading1']; 
+  $Notes = '';
+  if(isset($_POST['PA_Volts'])):
+    $PA_Volts = $_POST['PA_Volts']; 
   endif;  
-  if(isset($_POST['reading2'])):
-    $reading2 = $_POST['reading2']; 
+  if(isset($_POST['PA_I'])):
+    $PA_I = $_POST['PA_I']; 
   endif;  
-  if(isset($_POST['reading3'])):
-    $reading3 = $_POST['reading3']; 
+  if(isset($_POST['Pa_Watts'])):
+    $Pa_Watts3 = $_POST['Pa_Watts']; 
   endif;  
-  if(isset($_POST['reading4'])):
-    $reading4 = $_POST['reading4']; 
+  if(isset($_POST['Room_Temp'])):
+    $Room_Temp = $_POST['Room_Temp']; 
   endif;  
   if(isset($_POST[':00'])):
     $time1 = $_POST[':00']; 
@@ -58,18 +58,18 @@
   $email = 'noreply@ktrm.com'; 
   $message = "$name at $showtimes\n" . 
     "Readings: \n" . 
-    "Reading1: $reading1\n" . 
-    "Reading2: $reading2\n" . 
-    "Reading3: $reading3\n" . 
-    "Reading4: $reading4\n" . 
+    "PA Volts: $PA_Volts\n" . 
+    "PA-I: $PA_I\n" . 
+    "PA-Watts: $Pa_Watts\n" . 
+    "Room_Temp: $Room_Temp\n" . 
     "Times: \n" . 
     ":00 $time1\n" . 
     ":12 $time2\n" . 
     ":29 $time3\n" . 
     ":46 $time4\n" . 
     ":55 $time5\n" . 
-    "Discrepancies: \n" .
-    "$discrepancies\n" . 
+    "Notes: \n" .
+    "$Notes\n" . 
     "Signature: $signature "; 
    mail( $to, $subject, $message, 'From:' . $email );
 
