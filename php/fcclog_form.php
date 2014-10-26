@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>FCC Log</title>
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="../app.css" />
   </head>
-  <body>
+  <body class="content">
+   <a id="logo-wrapper_form" href="../home.html"><img src="../img/edge_logo.jpg" id="logo" alt="Edge Logo" height="80" width="200"></a> 
     <h1>Thanks for Submitting!</h1>
     <h3> <a href="../html/fcclog_form.html"> Submit Another </h3>
     <?php
@@ -21,6 +22,7 @@
   $time4 = '';
   $time5 = '';
   $Notes = '';
+  $Readings = 'No'; 
   if(isset($_POST['PA_Volts'])):
     $PA_Volts = $_POST['PA_Volts']; 
   endif;  
@@ -48,8 +50,11 @@
   if(isset($_POST[':55'])):
     $time5 = $_POST[':55']; 
   endif;  
-   if(isset($_POST['discrepancies'])):
+  if(isset($_POST['discrepancies'])):
     $discrepancies = $_POST['discrepancies']; 
+  endif; 
+  if(isset($_POST['ReadingsYes'])):
+    $Readings = "Yes"; 
   endif; 
   $signature= $_POST['signature'];
   
@@ -70,7 +75,8 @@
     ":55 $time5\n" . 
     "Notes: \n" .
     "$Notes\n" . 
-    "Signature: $signature "; 
+    "Signature: $signature " . 
+    "Readings OK?: $Readings "; 
    mail( $to, $subject, $message, 'From:' . $email );
 
 error_reporting(E_ALL);

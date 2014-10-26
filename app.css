@@ -18,6 +18,10 @@ body {
   margin: 0;
 }
 
+#logo-wrapper_form {
+  clear:right; 
+}
+
 #logo:hover{
 	border: 5px solid white;
 }
@@ -43,6 +47,9 @@ nav a {
   position: relative; /* set the origin for child boxes to be positioned from */
 }
 
+#form{
+  line-height: 90%; 
+}
 .links li a:hover {
   background-color: #CC252D;
   transition: .3s background-color;
@@ -74,6 +81,15 @@ nav a {
   text-shadow: 2px 2px #C0C0C0; 
 }
 
+#required_key{
+  color: Red;
+}
+
+
+.loginfo {
+  color: #505050;
+}
+
 .how-to-inner-ol {
   list-style: lower-alpha;
 }
@@ -98,7 +114,7 @@ nav a {
 #biggest {
 		font-size: 250%; 
 }
-.main li{
+li{
 		list-style: none;
 } 
 
