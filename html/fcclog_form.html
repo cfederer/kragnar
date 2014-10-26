@@ -4,45 +4,76 @@
   <head>
     <meta charset="utf-8" />
     <meta name="author" content="Callie Federer, Sean Hellebusch" />
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="../app.css">
     <title>KTRM DJ Website</title>
   </head>
-  <body>
-    <h1>FCC Log</h1>
+  <body class="content", id="form">
+    <a id="logo-wrapper_form" href="../home.html"><img src="../img/edge_logo.jpg" id="logo" alt="Edge Logo" height="80" width="200"></a> 
+    <h1>KTRM FCC Log</h1>
+    <p class="loginfo"> DJ Task List </p>
+    <ul class="loginfo">
+      <li> Check spot logs </li>
+      <li> Take transmitter readings </li>
+      <li> Check dry erase board/bulletin board for messages </li>
+    </ul>
+    <p class="loginfo">Spot Log Key </p>
+    <ul class="loginfo">
+      <li> M100 - Random PSA (Simian/Wavecart) </li>
+      <li> CE - Community Event (Binder) </li>
+      <li> SP - Specialty Show Promo (Binder) </li>
+      <li> KP - KTRM Promo (Binder) </li>
+      <li> U - Underwriting (Binder/Simian/Wavecart) </li>
+      <li> L - Liner (Simian/Wavecart) </li>
+      <li> LG - Legal ID (Simian/Wavecart) </li>
+   </ul>
+   <p id="required_key"> * Required </p>
 
     <form method="post" action="../php/fcclog_form.php">
+    
       <p>
         <label for="name">DJ Name(s)</label>
         <input type="text" id="name" name="name" required="required" />
       </p>
-
+      
       <p>
         <label for="showtimes">Show Times</label>
         <input type="text" id="showtimes" name="showtimes" required="required"/>
       </p>
 
-      <h3>Readings</h3>
       <p>
-        <label for="reading1">Reading 1</label>
-        <input type="text" id="reading1" name="reading1" />
+        <label for="PA Volts">PA Volts</label>
+        <input type="text" id="PA_Volts" name="PA_Volts" />
       </p>
 
       <p>
-        <label for="reading2">Reading 2</label>
-        <input type="text" id="reading2" name="reading2" />
+        <label for="PA-I">PA-I</label>
+        <input type="text" id="PA_I" name="PA_I" />
       </p>
 
       <p>
-        <label for="reading3">Reading 3</label>
-        <input type="text" id="reading3" name="reading3" />
+        <label for="PA-Watts">PA-Watts</label>
+        <input type="text" id="Pa_Watts" name="Pa_Watts" />
       </p>
 
       <p>
-        <label for="reading4">Reading 4</label>
-        <input type="text" id="reading4" name="reading4" />
+        <label for="Room Temp">Room Temp</label>
+        <input type="text" id="Room_Temp" name="Room_Temp" />
       </p>
+      
+      <p>
+        <label for="Readings"> Readings ok? </label>
+        <ul>
+          <li> 
+            <input type="radio" name="ReadingsYes" value="ReadingsYes"/>
+            Yes
+          </li>
+          <li>
+            <input type="radio" name="ReadingsNo" />
+            No 
+          </li>
+      </ul> 
+     </p>
 
-      <h3>Times</h3>
       <p>
         <label for=":00">:00</label>
         <input type="text" id=":00" name=":00" />
@@ -69,14 +100,20 @@
       </p>
 
       <p>
-        <label for="discrepancies">Discrepancies?</label>
-        <textarea id="discrepancies" name="discrepancies"></textarea>
+        <label for="Notes">Notes?</label>
+        <textarea id="Notes" name="Notes"></textarea>
       </p>
 
-      <p>I played the legal id at the top of the hour.</p>
+      
       <p>
+<<<<<<< HEAD
         <label for="signature">Signature</label>
         <input type="text" id="signature" name="signature" required="required" />
+=======
+        <label for="signature">Digital Signature &#42;</label>
+        <p class="loginfo">I played the legal id at the top of the hour.</p>
+        <input type="text" id="signature" name="signature" />
+>>>>>>> 07d4b1a3b39487b404d776fe0f6ac06ccab61815
       </p>
       
       <p>
