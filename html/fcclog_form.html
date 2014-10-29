@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,115 +6,117 @@
     <link rel="stylesheet" href="../app.css">
     <title>KTRM DJ Website</title>
   </head>
-  <body class="content", id="form">
-    <a id="logo-wrapper_form" href="../home.html"><img src="../img/edge_logo.jpg" id="logo" alt="Edge Logo" height="80" width="200"></a> 
+  <body class="content" id="form">
+    <a id="logo-wrapper_form" href="../home.html">
+      <img src="../img/edge_logo.jpg" id="logo" alt="Edge Logo"
+           height="80" width="200">
+    </a>
     <h1>KTRM FCC Log</h1>
-    <p class="loginfo"> DJ Task List </p>
+    <p class="loginfo">DJ Task List</p>
     <ul class="loginfo">
-      <li> Check spot logs </li>
-      <li> Take transmitter readings </li>
-      <li> Check dry erase board/bulletin board for messages </li>
+      <li>Check spot logs</li>
+      <li>Take transmitter readings</li>
+      <li>Check dry erase board/bulletin board for messages</li>
     </ul>
-    <p class="loginfo">Spot Log Key </p>
+    <p class="loginfo">Spot Log Key</p>
     <ul class="loginfo">
-      <li> M100 - Random PSA (Simian/Wavecart) </li>
-      <li> CE - Community Event (Binder) </li>
-      <li> SP - Specialty Show Promo (Binder) </li>
-      <li> KP - KTRM Promo (Binder) </li>
-      <li> U - Underwriting (Binder/Simian/Wavecart) </li>
-      <li> L - Liner (Simian/Wavecart) </li>
-      <li> LG - Legal ID (Simian/Wavecart) </li>
+      <li>M100 - Random PSA (Simian/Wavecart)</li>
+      <li>CE - Community Event (Binder)</li>
+      <li>SP - Specialty Show Promo (Binder)</li>
+      <li>KP - KTRM Promo (Binder)</li>
+      <li>U - Underwriting (Binder/Simian/Wavecart)</li>
+      <li>L - Liner (Simian/Wavecart)</li>
+      <li>LG - Legal ID (Simian/Wavecart)</li>
    </ul>
-   <p id="required_key"> * Required </p>
-
     <form method="post" action="../php/fcclog_form.php">
-    
+
       <p>
         <label for="name">DJ Name(s)</label>
-        <input type="text" id="name" name="name" required="required" />
-      </p>
-      
-      <p>
-        <label for="showtimes">Show Times</label>
-        <input type="text" id="showtimes" name="showtimes" required="required"/>
+        <input type="text" id="name" name="name" required="required"
+               placeholder="required" pattern="[\w\s\-]+" />
+               TODO accept multiple names
       </p>
 
       <p>
-        <label for="PA Volts">PA Volts</label>
-        <input type="text" id="PA_Volts" name="PA_Volts" />
+        <label for="showtimes">Show Times</label>
+        <input type="text" id="showtimes" name="showtimes" required="required"
+               placeholder="required"
+               pattern="((0?[1-9]|1[0-2])(\:[0-5][0-9])?(am|pm)?)\-((0?[1-9]|1[0-2])(\:[0-5][0-9])?(am|pm)?)" />
+      </p>
+
+      <p>
+        <label for="PA_Volts">PA Volts</label>
+        <input type="text" id="PA_Volts" name="PA_Volts"
+               pattern="\d{0,}(\.\d{0,})" />
       </p>
 
       <p>
         <label for="PA-I">PA-I</label>
-        <input type="text" id="PA_I" name="PA_I" />
+        <input type="text" id="PA-I" name="PA-I"
+               pattern="\d{0,}(\.\d{0,})" />
       </p>
 
       <p>
         <label for="PA-Watts">PA-Watts</label>
-        <input type="text" id="Pa_Watts" name="Pa_Watts" />
+        <input type="text" id="PA-Watts" name="PA-Watts"
+               pattern="\d{0,}(\.\d{0,})" />
       </p>
 
       <p>
-        <label for="Room Temp">Room Temp</label>
-        <input type="text" id="Room_Temp" name="Room_Temp" />
+        <label for="Room_Temp">Room Temp</label>
+        <input type="text" id="Room_Temp" name="Room_Temp"
+              pattern="\d{0,}(\.\d{0,})" />
       </p>
-      
-      <p>
-        <label for="Readings"> Readings ok? </label>
+
+      <div>
+        <label for="ReadingsYes">Readings ok?</label>
         <ul>
-          <li> 
-            <input type="radio" name="ReadingsYes" value="ReadingsYes"/>
-            Yes
-          </li>
-          <li>
-            <input type="radio" name="ReadingsNo" />
-            No 
-          </li>
-      </ul> 
-     </p>
+          <li><input id="ReadingsYes" type="radio"
+                        name="ReadingsYes" value="ReadingsYes" />Yes</li>
+          <li><input type="radio" name="ReadingsNo" />No</li>
+        </ul>
+     </div>
 
       <p>
         <label for=":00">:00</label>
-        <input type="text" id=":00" name=":00" />
+        <input type="text" id=":00" name=":00" pattern="([a-zA-Z]|\d)*" />
+          TODO letters or numers, no order no decimals
       </p>
 
       <p>
         <label for=":12">:12</label>
-        <input type="text" id=":12" name=":12" />
+        <input type="text" id=":12" name=":12" pattern="([a-zA-Z]|\d)*" />
       </p>
 
       <p>
         <label for=":29">:29</label>
-        <input type="text" id=":29" name=":29" />
+        <input type="text" id=":29" name=":29" pattern="([a-zA-Z]|\d)*" />
       </p>
 
       <p>
         <label for=":46">:36</label>
-        <input type="text" id=":46" name=":46" />
+        <input type="text" id=":46" name=":46" pattern="([a-zA-Z]|\d)*" />
       </p>
 
       <p>
         <label for=":55">:55</label>
-        <input type="text" id=":55" name=":55" />
+        <input type="text" id=":55" name=":55" pattern="([a-zA-Z]|\d)*" />
       </p>
 
       <p>
         <label for="Notes">Notes?</label>
-        <textarea id="Notes" name="Notes"></textarea>
+        <textarea id="Notes" name="Notes" ></textarea>
       </p>
 
-      
-      <p>
-<<<<<<< HEAD
-        <label for="signature">Signature</label>
-        <input type="text" id="signature" name="signature" required="required" />
-=======
-        <label for="signature">Digital Signature &#42;</label>
+
+      <div>
+        <label for="signature">Digital Signature</label>
         <p class="loginfo">I played the legal id at the top of the hour.</p>
-        <input type="text" id="signature" name="signature" />
->>>>>>> 07d4b1a3b39487b404d776fe0f6ac06ccab61815
-      </p>
-      
+        <input type="text" id="signature" name="signature" required="required"
+               pattern="[\w\s\-]+" placeholder="required" />
+               TODO accept multiple signatures
+      </div>
+
       <p>
         <input type="submit" value="Submit Report" name="submit" />
       </p>

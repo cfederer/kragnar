@@ -1,17 +1,25 @@
+/*
+ * Authors   => Callie Federer, Sean Hellebusch
+ * Date      => 10.3.2014
+ * Version   => 1
+ *
+ * CSS for the KTRM DJ site
+ */
+
 *{
- font-family: 'Oswald', sans-serif; 
+ font-family: 'Oswald', sans-serif;
 }
 
 html{
-  background-image: url("./img/vinyl-bg.jpg"); 
+  background-image: url("./img/vinyl-bg.jpg");
 }
 
 body {
   line-height: 40px;
-	color: #E5E4E2;
+  color: #E5E4E2;
   margin: 0;
 }
-	
+
 #logo-wrapper {
   position: absolute;
   padding: 0;
@@ -19,7 +27,7 @@ body {
 }
 
 #logo-wrapper_form {
-  clear:right; 
+  clear:right;
 }
 
 #logo:hover{
@@ -48,25 +56,25 @@ nav a {
 }
 
 #form{
-  line-height: 90%; 
+  line-height: 90%;
 }
 .links li a:hover {
   background-color: #CC252D;
   transition: .3s background-color;
 }
 
- .links  ul ul { /* lists within lists... */
+.links  ul ul { /* lists within lists... */
   position: absolute; /* place them over the top of everything */
   display: none; /* hide 'em */
   width: 180px;
 }
 
- .links li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
+.links li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
   display: block; /* show 'em */
 }
 
 .content {
- 	color: #03205A;
+  color: #03205A;
   width: 800px;
   margin-top: 5%;
   margin-right: auto;
@@ -78,7 +86,7 @@ nav a {
 
 .title {
   text-align: center;
-  text-shadow: 2px 2px #C0C0C0; 
+  text-shadow: 2px 2px #C0C0C0;
 }
 
 #required_key{
@@ -95,10 +103,10 @@ nav a {
 }
 
 #announce{
-		position: absolute;  
-		margin-top: 0px; 
-		margin-left: 500px; 
-		text-align: left; 
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 500px;
+  text-align: left;
 }
 .main {
 	color: #03205A;
@@ -112,16 +120,16 @@ nav a {
 }
 
 #biggest {
-		font-size: 250%; 
+  font-size: 250%;
 }
 li{
-		list-style: none;
-} 
+  list-style: none;
+}
 
 .main a:link{
-		color: #03205A
+  color: #03205A;
 }
 
 .main a:visited{
-		color: #CC252D
+  color: #CC252D;
 }
