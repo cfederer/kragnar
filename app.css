@@ -133,3 +133,23 @@ li{
 .main a:visited{
   color: #CC252D;
 }
+
+#management{
+  line-height: 20px; 
+  margin-left: 40px; 
+}
+
+.emphasis{
+  font-weight: bold;
+}
+
+.normal{
+  font-weight: normal;
+}
+
+#management2{
+  position: absolute;
+  margin-top: -420px;
+  margin-left: 440px; 
+  line-height: 20px; 
+}
