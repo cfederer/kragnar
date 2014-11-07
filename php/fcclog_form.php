@@ -71,9 +71,11 @@
     endif;
   endif;
 
-  $to = 'calliefederer@gmail.com';
+  /*$to = 'calliefederer@gmail.com';
   $subject = "FCC Log for $name at $showtimes";
-  $email = 'noreply@ktrm.com';
+  $email = 'noreply@ktrm.com';*/
+  $file = fopen("../logs/fcc.txt", "a"); 
+
   $message = "$name at $showtimes\n" .
     "Readings: \n" .
     "PA Volts: $PA_Volts\n" .
@@ -90,8 +92,9 @@
     "$Notes\n" .
     "Signature: $signature " .
     "Readings OK?: $Readings ";
-   mail( $to, $subject, $message, 'From:' . $email );
-
+   //mail( $to, $subject, $message, 'From:' . $email );
+   fwrite($file, $message); 
+   fclose($file); 
   error_reporting(E_ALL);
   ini_set('display_errors', '1');
  ?>
