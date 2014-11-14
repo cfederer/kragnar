@@ -74,7 +74,8 @@
   /*$to = 'calliefederer@gmail.com';
   $subject = "FCC Log for $name at $showtimes";
   $email = 'noreply@ktrm.com';*/
-  $file = fopen("../logs/fcc.txt", "a"); 
+  $file = fopen("../logs/fcc.txt", "w"); 
+  //$file = fopen("fcc.txt", "a"); 
 
   $message = "$name at $showtimes\n" .
     "Readings: \n" .
