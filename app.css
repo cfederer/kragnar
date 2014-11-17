@@ -48,6 +48,11 @@ nav a {
   background: #03205A;
 }
 
+#textbox{
+  height = 90px;
+  width = 50px;
+}
+
 .links li { /* all list items... */
   list-style: none;
   padding: 10px 10px 10px 10px;
