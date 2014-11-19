@@ -11,8 +11,8 @@
   	<a id="logo-wrapper" href="../home.html"><img src="../img/edge_logo.jpg" id="logo" alt="Edge Logo" height="80" width="200"></a>  
     <nav class="links">
       <ul>
-        <li><a href="">Management</a></li>
-        <li><a href="">Schedule</a></li>
+        <li><a href="../html/management.html">Management</a></li>
+        <li><a href="../html/schedule.html">Schedule</a></li>
         <li><a href="">Calendar</a></li>
         <li>
           <a href="">Resources &#x25bc;</a>
@@ -21,20 +21,24 @@
             <li><a href="how_to_simian_format.html">Simian Format</a></li>
             <li><a href="how_to_simian_liner.html">Simian Liner</a></li>
             <li><a href="how_to_news.html">News at &#58;55</a></li>
-          </ul>
+          </ul>         
         </li>
       </ul>
     </nav>
     
     <div class="content">
       <form>
-        <p> Enter Lyrics Here: </p>
-        <textarea name="lyrics" rows="40" cols="55" > </textarea>
+      <h3>Lines highlighted in red have a FCC inappropriate word.</h3>
+        <p id="enterhere"> Enter Lyrics Here: </p>
+        <textarea name="lyrics" rows="40" cols="55" ></textarea>
       </form>
       <p>
-        <input type="submit" value="Check!" name="submit" />
+        <button type="submit" id="submit" >Check!</button>
        </p>
+       <div id="checked">
+       </div>
+       <button type="submit" id="refresh" class="hidden">Check more lyrics</button>
   </div>
-    
+   <script type="text/javascript" src="../js/app.js"></script> 
   </body>
 </html>

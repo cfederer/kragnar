@@ -158,3 +158,16 @@ li{
   margin-left: 440px; 
   line-height: 20px; 
 }
+
+.hidden{
+  display:none;
+}
+#checked p {
+  line-height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.alert{
+  background-color: #CC252D; 
+}
