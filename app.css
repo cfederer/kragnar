@@ -168,6 +168,14 @@ li{
   margin: 0;
 }
 
+.okay{
+  color: Green;
+}
+
+.warning{
+  color: #CC252D;
+}
+
 .alert{
   background-color: #CC252D; 
 }
