@@ -1,3 +1,5 @@
+/* Callie Federer and Sean Hellebusch 
+   A lyric checker for KTRM DJs to stay FCC appropriate*/ 
 "use strict";
 window.onload = attachEventHandlers;
 
@@ -27,18 +29,24 @@ var BANNED_WORDS = [
 	"god damn",
 	"jizz",
 	"gizz",
-    "poon",
-    "pussy",
+  "poon",
+  "pussy",
 	"nigger" ];
 
-
+/* Checks lyrics after user submits for any of the words
+   in the offensive array. The function then creates new
+   paragraphs from the original array of input and highlights
+   them in read if they contain an FCC-banned word  */
 function checkLyrics() {
+  /* count if any words found */
   var count = 0; 
 	var input = document.querySelector("textarea");
 	var lyrics = input.value.toLowerCase();
+	/* sanitize */
 	lyrics = escapeHTML(lyrics);
 	lyrics = lyrics.split("\n");
 	var area = document.getElementById("checked");
+	/* check for bad word, highlight if exists in line, and create p*/
 	for(var i = 0; i < lyrics.length; i++ ) {
 		var newp = document.createElement("p");
 		newp.innerHTML = lyrics[i];
@@ -57,6 +65,8 @@ function checkLyrics() {
 	notify(count); 
 }
 
+/* If no FCC banned words found, print out appropriate message.
+   If any words are found, print out inappropriate message */
 function notify(count){
   var text = document.getElementById("note"); 
   var header = document.createElement("h3");
@@ -71,10 +81,13 @@ function notify(count){
   text.appendChild(header); 
 }
 
+/* refreshes page to allow user to submit new lyrics */ 
 function refresh(){
 	location.reload();
 }
 
+/* Stolen from the interwebs http://www.htmlescape.net/stringescape_tool.html
+   sanitizes user input from any HTML special characters */ 
 function escapeHTML(text) {
   var map = {
     '&': '&amp;',
