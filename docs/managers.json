@@ -1,0 +1,60 @@
+{
+  "managers": [
+    {
+      "name": "Jared Heern",
+      "position": "Station Manager",
+      "phone": "618.534.9556",
+      "email": "jaredheern@gmail.com",
+      "office_hours": "M 6-8pm"
+    },
+    {
+      "name": "Kelly Cunningham",
+      "position": "Assistant Station Manager",
+      "phone": "315.556.5274",
+      "email": "kmc1132@truman.edu",
+      "office_hours": "TBD"
+    },
+    {
+      "name": "Caroline Pugh",
+      "position": "Chief Announer",
+      "phone": "636.696.3013",
+      "email": "ctp6722@truman.edu",
+      "office_hours": "T 12-2pm"
+    },
+    {
+      "name": "Sara Hettel",
+      "position": "Programming Director",
+      "phone": "636.577.7095",
+      "email": "seh3421@truman.edu",
+      "office_hours": "TTH 3-4pm"
+    },
+    {
+      "name": "Pallavi Thota",
+      "position": "Promotions Director",
+      "phone": "309.634.1420",
+      "email": "pptt2448@truman.edu",
+      "office_hours": "TTH 1-1:30pm"
+    },
+    {
+      "name": "Anna Grace",
+      "position": "Sports Director",
+      "phone": "660.822.6116",
+      "email": "akg3846@truman.edu",
+      "office_hours": "MW 9:30-10:30am"
+    },
+    {
+      "name": "Laura Seaman",
+      "position": "News Director",
+      "phone": "314.341.5487",
+      "email": "lfs1517@truman.edu",
+      "office_hours": "MF 3:30-4:30pm"
+    },
+    {
+      "name": "Mason Bracken",
+      "position": "Production Director",
+      "phone": "314.795.0044",
+      "email": "mdb4235@truman.edu",
+      "office_hours": "TH 2:30-4:30pm"
+    }
+  ]
+}

@@ -27,8 +27,8 @@ var BANNED_WORDS = [
 	"god damn",
 	"jizz",
 	"gizz",
-  "poon",
-  "pussy",
+    "poon",
+    "pussy",
 	"nigger" ];
 
 
@@ -36,7 +36,7 @@ function checkLyrics() {
   var count = 0; 
 	var input = document.querySelector("textarea");
 	var lyrics = input.value.toLowerCase();
-	lyrics = escapeHTML(lyrics)
+	lyrics = escapeHTML(lyrics);
 	lyrics = lyrics.split("\n");
 	var area = document.getElementById("checked");
 	for(var i = 0; i < lyrics.length; i++ ) {
