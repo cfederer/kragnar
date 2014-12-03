@@ -76,38 +76,42 @@ if( isset($_POST['submit'])):
   endif;
 endif;
 
-$connector = new PDO_Connector();
-$pdo = $connector->connect();
+try {
+  $connector = new PDO_Connector();
+  $pdo = $connector->connect();
 
-$query = "INSERT INTO fcclogtest (timestamp, showtime, dj, pa_volts, pa_amps, pa_pwr,
-                                    room_temp, readings, r_zero, r_twelve, r_twentynine, 
-                                    r_fortysix, r_fiftyfive, notes, digital_signature)
-                                    VALUES (now(), :showtime, :dj, :pa_volts, :pa_amps, :pa_pwr,
-                                    :room_temp, :readings, :r_zero, :r_twelve, :r_twentynine, 
-                                    :r_fortysix, :r_fiftyfive, :notes, :digital_signature) ";
-$stmnt = $pdo->prepare($query);
+  $query = "INSERT INTO fcclogtest (timestamp, showtime, dj, pa_volts, pa_amps, pa_pwr,
+                                      room_temp, readings, r_zero, r_twelve, r_twentynine, 
+                                      r_fortysix, r_fiftyfive, notes, digital_signature)
+                                      VALUES (now(), :showtime, :dj, :pa_volts, :pa_amps, :pa_pwr,
+                                      :room_temp, :readings, :r_zero, :r_twelve, :r_twentynine, 
+                                      :r_fortysix, :r_fiftyfive, :notes, :digital_signature) ";
+  $stmnt = $pdo->prepare($query);
 
-// bind values to query
-$stmnt->bindValue(':showtime', $showtimes);
-$stmnt->bindValue(':dj', $name);
-$stmnt->bindValue(':pa_volts', $PA_Volts);
-$stmnt->bindValue(':pa_amps', $PA_I);
-$stmnt->bindValue(':pa_pwr', $Pa_Watts);
-$stmnt->bindValue(':room_temp', $Room_Temp);
-$stmnt->bindValue(':r_zero', $time1);
-$stmnt->bindValue(':r_twelve', $time2);
-$stmnt->bindValue(':r_twentynine', $time3);
-$stmnt->bindValue(':r_fortysix', $time4);
-$stmnt->bindValue(':r_fiftyfive', $time5);
-$stmnt->bindValue(':notes', $notes);
-$stmnt->bindValue(':digital_signature', $signature);
-if($Readings == "Yes"): 
-  $stmnt->bindValue(':readings', 1 );
-else:
-  $stmnt->bindValue(':readings', 0);
-endif;
+  // bind values to query
+  $stmnt->bindValue(':showtime', $showtimes);
+  $stmnt->bindValue(':dj', $name);
+  $stmnt->bindValue(':pa_volts', $PA_Volts);
+  $stmnt->bindValue(':pa_amps', $PA_I);
+  $stmnt->bindValue(':pa_pwr', $Pa_Watts);
+  $stmnt->bindValue(':room_temp', $Room_Temp);
+  $stmnt->bindValue(':r_zero', $time1);
+  $stmnt->bindValue(':r_twelve', $time2);
+  $stmnt->bindValue(':r_twentynine', $time3);
+  $stmnt->bindValue(':r_fortysix', $time4);
+  $stmnt->bindValue(':r_fiftyfive', $time5);
+  $stmnt->bindValue(':notes', $notes);
+  $stmnt->bindValue(':digital_signature', $signature);
+  if($Readings == "Yes"): 
+    $stmnt->bindValue(':readings', 1 );
+  else:
+    $stmnt->bindValue(':readings', 0);
+  endif;
 
-$stmnt->execute();  
+  $stmnt->execute();  
+} catch(PDOException $e) {
+            echo 'error: ' . $e->getMessage();
+}
  ?>
 <!DOCTYPE html>
 <html>
