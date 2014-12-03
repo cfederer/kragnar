@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `fcclogtest` (
-  `timestamp` datetime DEFAULT CURRENT_TIMESTAMP,
+  `timestamp` datetime NOT NULL,
   `showtime` varchar(12) DEFAULT NULL,
   `dj` varchar(35) NOT NULL,
   `pa_volts` int(11) DEFAULT NULL,
