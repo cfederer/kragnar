@@ -7,7 +7,7 @@
  * This php script processes and validates the form
  * date from fcclog_form.html.
  */
-include( 'pdo_connector.php' );
+include( 'hidden/pdo_connector.php' );
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
