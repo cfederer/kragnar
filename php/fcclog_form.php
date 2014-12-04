@@ -16,9 +16,8 @@ $showtime_pattern = '/((0?[1-9]|1[0-2])(\:[0-5][0-9])?(am|pm)?)\-((0?[1-9]|1[0-2
 $name_pattern     = '/[\w\s\-]*/';
 $readings_pattern = '/([a-zA-Z]|\d)*/';
 $PA_Volts  = '';
-$PA_I      = '';
-$Pa_Watts  = '';
-$Room_Temp = '';
+$PA_AMPS   = '';
+$FWRD_PWR  = '';
 $time1     = '';
 $time2     = '';
 $time3     = '';
@@ -43,14 +42,11 @@ if( isset($_POST['submit'])):
     if(isset($_POST['PA_Volts'])):
       $PA_Volts = htmlspecialchars($_POST['PA_Volts']);
     endif;
-    if(isset($_POST['PA-I'])):
-      $PA_I = htmlspecialchars($_POST['PA-I']);
+    if(isset($_POST['PA-AMPS'])):
+      $PA_AMPS = htmlspecialchars($_POST['PA-AMPS']);
     endif;
-    if(isset($_POST['PA-Watts'])):
-      $Pa_Watts = htmlspecialchars($_POST['PA-Watts']);
-    endif;
-    if(isset($_POST['Room_Temp'])):
-      $Room_Temp = htmlspecialchars($_POST['Room_Temp']);
+    if(isset($_POST['FWRD-PWR'])):
+      $FWRD_PWR = htmlspecialchars($_POST['FWRD-PWR']);
     endif;
     if(isset($_POST[':00'])):
       $time1 = htmlspecialchars($_POST[':00']);
@@ -81,11 +77,11 @@ try {
   $connector = new PDO_Connector();
   $pdo = $connector->connect();
 
-  $query = "INSERT INTO fcclog (timestamp, showtime, dj, pa_volts, pa_amps, pa_pwr,
-                                      room_temp, readings, r_zero, r_twelve, r_twentynine, 
+  $query = "INSERT INTO fcclog (timestamp, showtime, dj, pa_volts, pa_amps, fwrd_pwr,
+                                      readings, r_zero, r_twelve, r_twentynine, 
                                       r_fortysix, r_fiftyfive, notes, digital_signature)
-                                      VALUES (now(), :showtime, :dj, :pa_volts, :pa_amps, :pa_pwr,
-                                      :room_temp, :readings, :r_zero, :r_twelve, :r_twentynine, 
+                                      VALUES (now(), :showtime, :dj, :pa_volts, :pa_amps, :fwrd_pwr,
+                                      :readings, :r_zero, :r_twelve, :r_twentynine, 
                                       :r_fortysix, :r_fiftyfive, :notes, :digital_signature) ";
   $stmnt = $pdo->prepare($query);
 
@@ -93,9 +89,8 @@ try {
   $stmnt->bindValue(':showtime', $showtimes);
   $stmnt->bindValue(':dj', $name);
   $stmnt->bindValue(':pa_volts', $PA_Volts);
-  $stmnt->bindValue(':pa_amps', $PA_I);
-  $stmnt->bindValue(':pa_pwr', $Pa_Watts);
-  $stmnt->bindValue(':room_temp', $Room_Temp);
+  $stmnt->bindValue(':pa_amps', $PA_AMPS);
+  $stmnt->bindValue(':fwrd_pwr', $FWRD_PWR);
   $stmnt->bindValue(':r_zero', $time1);
   $stmnt->bindValue(':r_twelve', $time2);
   $stmnt->bindValue(':r_twentynine', $time3);

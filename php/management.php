@@ -64,7 +64,7 @@ if($size % 2 == 0) {
                 <li><?= $m["name"] ?></li>
                 <li><?= $m["phone"] ?></li>
                 <li><?= $m["email"] ?></li>
-                <li><?= $m["office_hours"] ?></li>
+                <li>Office hours: <?= $m["office_hours"] ?></li>
               </ul>
               <?php endforeach; ?>
           </ul>
@@ -75,7 +75,7 @@ if($size % 2 == 0) {
                 <li><?= $m["name"] ?></li>
                 <li><?= $m["phone"] ?></li>
                 <li><?= $m["email"] ?></li>
-                <li><?= $m["office_hours"] ?></li>
+                <li>Office hours: <?= $m["office_hours"] ?></li>
               </ul>
               <?php endforeach; ?>
           </ul>
