@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `fcclogtest`
 --
 
-CREATE TABLE IF NOT EXISTS `fcclogtest` (
+CREATE TABLE IF NOT EXISTS `fcclog` (
   `timestamp` datetime NOT NULL,
   `showtime` varchar(12) DEFAULT NULL,
   `dj` varchar(35) NOT NULL,
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `fcclogtest` (
 -- Dumping data for table `fcclogtest`
 --
 
-INSERT INTO `fcclogtest` (`timestamp`, `showtime`, `dj`, `pa_volts`, `pa_amps`, `pa_pwr`, `room_temp`, `readings`, `r_zero`, `r_twelve`, `r_twentynine`, `r_fortysix`, `r_fiftyfive`, `notes`, `digital_signature`) VALUES
+INSERT INTO `fcclog` (`timestamp`, `showtime`, `dj`, `pa_volts`, `pa_amps`, `pa_pwr`, `room_temp`, `readings`, `r_zero`, `r_twelve`, `r_twentynine`, `r_fortysix`, `r_fiftyfive`, `notes`, `digital_signature`) VALUES
 ('2014-11-21 11:24:50', '4-5', 'sean hellebusch', 1, 2, 3, 78, 1, 'asd', 'asdf', 'asdf', 'asd', 'asdf', 'hello world', 'sean hellebusch');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

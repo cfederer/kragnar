@@ -26,6 +26,7 @@ $time4     = '';
 $time5     = '';
 $Notes     = '';
 $Readings  = 'No';
+$success   = FALSE;
 
 if( isset($_POST['submit'])):
   $missing = !isset($_POST['name']) ||
@@ -80,7 +81,7 @@ try {
   $connector = new PDO_Connector();
   $pdo = $connector->connect();
 
-  $query = "INSERT INTO fcclogtest (timestamp, showtime, dj, pa_volts, pa_amps, pa_pwr,
+  $query = "INSERT INTO fcclog (timestamp, showtime, dj, pa_volts, pa_amps, pa_pwr,
                                       room_temp, readings, r_zero, r_twelve, r_twentynine, 
                                       r_fortysix, r_fiftyfive, notes, digital_signature)
                                       VALUES (now(), :showtime, :dj, :pa_volts, :pa_amps, :pa_pwr,
@@ -107,6 +108,8 @@ try {
   else:
     $stmnt->bindValue(':readings', 0);
   endif;
+  
+  $success = TRUE;
 
   $stmnt->execute();  
 } catch(PDOException $e) {
@@ -132,7 +135,7 @@ try {
     ?>
           <h2 class="problem">There was an error with your submission.</h2>
           <p>
-            <a href="fcclog_form.html">
+            <a href="../html/fcclog_form.html">
               Please fill out the form and submit again.
             </a> 
             Thank you.
