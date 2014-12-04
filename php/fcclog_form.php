@@ -25,6 +25,7 @@ $time4     = '';
 $time5     = '';
 $Notes     = '';
 $Readings  = 'No';
+$studentID = '';
 $success   = FALSE;
 
 if( isset($_POST['submit'])):
@@ -69,6 +70,9 @@ if( isset($_POST['submit'])):
     if(isset($_POST['ReadingsYes'])):
       $Readings = "Yes";
     endif;
+    if(isset($_POST['studentID'])):
+      $studentID = htmlspecialchars($_POST['studentID']);
+    endif;
     $signature= htmlspecialchars($_POST['signature']);
   endif;
 endif;
@@ -79,10 +83,10 @@ try {
 
   $query = "INSERT INTO fcclog (timestamp, showtime, dj, pa_volts, pa_amps, fwrd_pwr,
                                       readings, r_zero, r_twelve, r_twentynine, 
-                                      r_fortysix, r_fiftyfive, notes, digital_signature)
+                                      r_fortysix, r_fiftyfive, notes, digital_signature, studentID)
                                       VALUES (now(), :showtime, :dj, :pa_volts, :pa_amps, :fwrd_pwr,
                                       :readings, :r_zero, :r_twelve, :r_twentynine, 
-                                      :r_fortysix, :r_fiftyfive, :notes, :digital_signature) ";
+                                      :r_fortysix, :r_fiftyfive, :notes, :digital_signature, :studentID) ";
   $stmnt = $pdo->prepare($query);
 
   // bind values to query
@@ -98,6 +102,7 @@ try {
   $stmnt->bindValue(':r_fiftyfive', $time5);
   $stmnt->bindValue(':notes', $notes);
   $stmnt->bindValue(':digital_signature', $signature);
+  $stmnt->bindValue(':studentID', $studentID);
   if($Readings == "Yes"): 
     $stmnt->bindValue(':readings', 1 );
   else:

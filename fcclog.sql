@@ -40,15 +40,23 @@ CREATE TABLE IF NOT EXISTS `fcclog` (
   `r_fortysix` varchar(30) DEFAULT NULL,
   `r_fiftyfive` varchar(30) DEFAULT NULL,
   `notes` varchar(100) DEFAULT 'NULL',
-  `digital_signature` varchar(35) DEFAULT NULL
+  `studentID` int(7) NOT NULL,
+  `digital_signature` varchar(35) DEFAULT NULL,
+  foreign key (`studentID`) references DJ(`s_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+create table if NOT exists `DJ` (
+    `s_ID` int(7) NOT NULL,
+    `first_name` varchar(255) NOT NULL,
+    `last_name` varchar(255) NOT NULL,
+    `show_name` varchar(255) NOT NULL,
+    `email` varchar(255) NOT NULL,
+    primary key (`s_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `fcclogtest`
 --
-
-INSERT INTO `fcclog` (`timestamp`, `showtime`, `dj`, `pa_volts`, `pa_amps`, `pa_pwr`, `room_temp`, `readings`, `r_zero`, `r_twelve`, `r_twentynine`, `r_fortysix`, `r_fiftyfive`, `notes`, `digital_signature`) VALUES
-('2014-11-21 11:24:50', '4-5', 'sean hellebusch', 1, 2, 3, 78, 1, 'asd', 'asdf', 'asdf', 'asd', 'asdf', 'hello world', 'sean hellebusch');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
