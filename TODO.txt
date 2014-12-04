@@ -1,0 +1,8 @@
+Fix error reporting in fcclog_form.php
+  -this says it's successful even if the insert fails...
+
+Join table?
+  -going to ask beck what this is...why not just use a query? don't get it.
+
+Add new pages to all nav bars. 
+  -make all nav bars loaded once? static?
