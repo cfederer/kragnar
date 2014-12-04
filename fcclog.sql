@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `fcclog` (
   `notes` varchar(100) DEFAULT 'NULL',
   `studentID` int(7) NOT NULL,
   `digital_signature` varchar(35) DEFAULT NULL,
-  foreign key (`studentID`) references DJ(`s_ID`)
+  primary key (`studentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 create table if NOT exists `DJ` (
@@ -61,3 +61,8 @@ create table if NOT exists `DJ` (
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+insert into dj values (000724030, "sean", "hellebusch", "hellagood show", "sah7817@truman.edu");
+insert into dj values (000123456, "tommy", "tester", "test show", "tt1234@truman.edu");
+insert into dj values (000456789, "foo", "bar", "foobar", "fb5678@truman.edu");
+
