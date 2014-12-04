@@ -40,7 +40,7 @@ if($size % 2 == 0) {
   <body> 
       <a id="logo-wrapper" href="../home.html"><img src="../img/edge_logo.jpg" 
       id="logo" alt="Edge Logo" height="80" width="200"></a>  
-      <nav class="links">
+      <nav>
         <ul>
             <li><a href="../html/schedule.html">Schedule</a></li>
             <li><a href="../html/lyrics.html">Lyric Checker</a></li>

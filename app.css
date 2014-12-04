@@ -15,15 +15,16 @@ html{
 }
 
 body {
-  line-height: 40px;
   color: #E5E4E2;
   margin: 0;
 }
 
 #logo-wrapper {
   position: absolute;
+  top: 0;
   padding: 0;
   margin: 0;
+  z-index: 1;
 }
 
 #logo-wrapper_form {
@@ -31,7 +32,25 @@ body {
 }
 
 #logo:hover{
-	border: 5px solid white;
+  border: 5px solid white;
+}
+
+nav {
+  background: #03205A;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  border: 0px;
+}
+
+nav ul {
+  line-height: 35px;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
@@ -39,37 +58,41 @@ nav a {
   color: #FFFFFF;
   font-size: 1.2em;
   text-decoration: none;
+  width: 150px;
+  text-align: center;
 }
 
-.links ul { /* all lists... */
+nav ul li { /* all lists... */
+  display: block;
+  float: left;
   text-align: center;
   padding: 0;
   margin: 0;
   background: #03205A;
+  list-style: none;*/
 }
 
-.links li { /* all list items... */
-  list-style: none;
-  padding: 10px 10px 10px 10px;
-  display: inline; /* set the list items left-to-right */
-  position: relative; /* set the origin for child boxes to be positioned from */
-}
-
-
-
-.links li a:hover {
+nav li a:hover {
   background-color: #CC252D;
   transition: .3s background-color;
 }
 
-.links  ul ul { /* lists within lists... */
-  position: absolute; /* place them over the top of everything */
+nav ul ul { /* lists within lists... */
   display: none; /* hide 'em */
   width: 180px;
+  position: relative;
+  z-index: 1;
 }
 
-.links li:hover ul { /* when list items are hovered over, do this to lists contained within them... */
-  display: block; /* show 'em */
+nav ul li:hover > ul { /* when list items are hovered over, do this to lists contained within them... */
+  display: block;
+  position: absolute;
+}
+
+nav ul ul li {
+  position: relative;
+  display: block;
+  float: none;
 }
 
 .content {
@@ -112,7 +135,7 @@ nav a {
   text-align: left;
 }
 .main {
-	color: #03205A;
+  color: #03205A;
   width: 800px;
   margin-top: 5%;
   margin-right: auto;
@@ -125,6 +148,7 @@ nav a {
 #biggest {
   font-size: 250%;
 }
+
 li{
   list-style: none;
 }
