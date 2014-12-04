@@ -209,3 +209,63 @@ iframe {
   width: 800px;
   height: 600px;
 }
+
+table {
+  margin: 0 auto;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 800px;
+  border-collapse:
+  collapse; border-spacing: 0;
+}
+
+td, th {
+  border: 1px solid transparent; 
+  height: 30px;
+  transition:  0.3s; 
+}
+
+th {
+  background: #DFDFDF;
+  font-weight: bold;
+}
+
+td {
+  background: #FAFAFA;
+  text-align: center;
+}
+
+tr:nth-child(even) td { 
+  background: #F1F1F1; 
+}
+
+tr:nth-child(odd) td { 
+  background: #FEFEFE; 
+}
+
+tr td:hover { 
+  background: #CC252D; 
+  color: #FFF; 
+}
+
+th:hover {
+  background: #03205A;
+  color: #FFF;
+  transition: all 0.3s;  
+}
+
+.first_name {
+  width: 150px;
+}
+
+.last_name {
+  width: 150px;
+}
+
+.email {
+  width: 300px;
+}
+
+.action {
+  width: 200px;
+}

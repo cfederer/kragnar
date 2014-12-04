@@ -25,7 +25,6 @@ try {
   } catch(PDOException $e) {
       echo 'error: ' . $e->getMessage();
 } 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,14 +42,14 @@ try {
       <ul>
         <li><a href="../php/management.php">Management Info</a></li>
         <li><a href="../html/schedule.html">Schedule</a></li>
-        <li><a href="lyrics.html">Lyric Checker</a></li>
+        <li><a href="../html/lyrics.html">Lyric Checker</a></li>
         <li><a href="../html/calendar.html">Calendar</a></li>
         <li>
           <a href="">Resources &#x25bc;</a>
           <ul>
-            <li><a href="how_to_itunes.html">iTunes Tips</a></li>
-            <li><a href="how_to_simian_format.html">Simian Format</a></li>
-            <li><a href="how_to_simian_liner.html">Simian Liner</a></li>
+            <li><a href="../html/how_to_itunes.html">iTunes Tips</a></li>
+            <li><a href="../html/how_to_simian_format.html">Simian Format</a></li>
+            <li><a href="../html/how_to_simian_liner.html">Simian Liner</a></li>
           </ul>
         </li>
       </ul>
@@ -59,11 +58,28 @@ try {
     <div class="main content">
       <table>
         <tr>
-          <th id="first_name">First&uarr;&darr;</th>
-          <th id="last_name">Last&uarr;&darr;</th>
-          <th id="email">Email&uarr;&darr;</th>
+          <th class="first_name" id="first">First&uarr;&darr;</th>
+          <th class="last_name" id="last">Last&uarr;&darr;</th>
+          <th class="email" id="email">Email&uarr;&darr;</th>
+          <th>Action</th>
         </tr>
       </table>      
+
+      <table id="djs">
+    <?php
+        foreach( $djs as $row ): 
+    ?>
+      <tr>
+        <td class="first_name"><?= $row["first_name"] ?></td>
+        <td class="last_name"><?= $row["last_name"] ?></td>
+        <td class="email"><?= $row["email"] ?></td>
+        <td class="action">
+          <button id="logs">FCC Logs</button>
+        </td>
+      </tr>
+    <?php endforeach; ?>      
+    </table>
     </div>
+    <script src="../js/djs.js"></script>
   </body>
 </html>
