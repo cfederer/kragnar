@@ -22,7 +22,7 @@ function sortdjs() {
     
     request.onreadystatechange = function() {
           if(request.readyState == 4 && request.status == 200) {
-            document.getElementById("djs").innerHTML = request.responseText;
+            document.getElementById("dj").innerHTML = request.responseText;
           }
         };
           request.open( "GET", 

@@ -98,7 +98,7 @@ nav ul ul li {
 .content {
   color: #03205A;
   width: 800px;
-  margin-top: 5%;
+  margin-top: 7%;
   margin-right: auto;
   margin-left: auto;
   padding: 20px 20px 20px 20px;
@@ -137,7 +137,18 @@ nav ul ul li {
 .main {
   color: #03205A;
   width: 800px;
-  margin-top: 5%;
+  margin-top: 7%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 20px 200px 20px;
+  background: rgba(255, 255, 255, .9);
+  border-radius: 5px;
+}
+
+.logsmain{
+  color: #03205A;
+  width: 1000px;
+  margin-top: 7%;
   margin-right: auto;
   margin-left: auto;
   padding: 20px 20px 200px 20px;
@@ -210,7 +221,7 @@ iframe {
   height: 600px;
 }
 
-table {
+.djs {
   margin: 0 auto;
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
@@ -219,53 +230,156 @@ table {
   collapse; border-spacing: 0;
 }
 
-td, th {
+.djs td, th {
   border: 1px solid transparent; 
   height: 30px;
   transition:  0.3s; 
 }
 
-th {
+.djs th {
   background: #DFDFDF;
   font-weight: bold;
 }
 
-td {
+.djs td {
   background: #FAFAFA;
   text-align: center;
 }
 
-tr:nth-child(even) td { 
+.djs tr:nth-child(even) td { 
   background: #F1F1F1; 
 }
 
-tr:nth-child(odd) td { 
+.djs tr:nth-child(odd) td { 
   background: #FEFEFE; 
 }
 
-tr td:hover { 
+.djs tr td:hover { 
   background: #CC252D; 
   color: #FFF; 
 }
 
-th:hover {
+.djs th:hover {
   background: #03205A;
   color: #FFF;
   transition: all 0.3s;  
 }
 
 .first_name {
-  width: 150px;
+  width: 18.75%;
 }
 
 .last_name {
-  width: 150px;
+  width: 18.75%;
 }
 
 .email {
-  width: 300px;
+  width: 37.5%;
 }
 
 .action {
-  width: 200px;
+  width: 25%;
 }
+
+.logs {
+  font-size: .8em;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 1200px;
+  border-collapse:
+  collapse; border-spacing: 0;
+}
+
+.logs td, th {
+  border: 1px solid transparent; 
+  height: 30px;
+  transition:  0.3s; 
+}
+
+.logs th {
+  background: #DFDFDF;
+  font-weight: bold;
+}
+
+.logs td {
+  background: #FAFAFA;
+  text-align: center;
+}
+
+.logs tr:nth-child(even) td { 
+  background: #F1F1F1; 
+}
+
+.logs tr:nth-child(odd) td { 
+  background: #FEFEFE; 
+}
+
+.logs tr td:hover { 
+  background: #CC252D; 
+  color: #FFF; 
+}
+
+.logs th:hover {
+  background: #03205A;
+  color: #FFF;
+  transition: all 0.3s;  
+}
+
+.timestamp {
+  width: 12.5%;
+}
+
+.dj {
+  width: 10%;
+}
+
+.showtime  {
+  width: 5%;
+}
+
+.pavolts  {
+  width: 5%;
+}
+
+.paamps  {
+  width: 5%;
+}
+
+.fwrdpwr  {
+  width: 5%;
+}
+
+.reading {
+  width: 5%;
+}
+
+.reading0  {
+  width: 5%;
+}
+
+.reading1  {
+  width: 5%;
+}
+
+.reading2  {
+  width: 5%;
+}
+
+.reading3  {
+  width: 5%;
+}
+
+.reading4  {
+  width: 5%;
+}
+
+.notes  {
+  width: 14.1%;
+  word-wrap: break-word;
+}
+
+.signature  {
+  width: 12.5%;
+}
+
+

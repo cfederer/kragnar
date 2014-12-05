@@ -56,7 +56,7 @@ try {
     </nav>
     
     <div class="main content">
-      <table>
+      <table class="djs">
         <tr>
           <th class="first_name" id="first">First&uarr;&darr;</th>
           <th class="last_name" id="last">Last&uarr;&darr;</th>
@@ -65,16 +65,16 @@ try {
         </tr>
       </table>      
 
-      <table id="djs">
+      <table id="dj" class="djs">
     <?php
         foreach( $djs as $row ): 
     ?>
       <tr>
         <td class="first_name"><?= $row["first_name"] ?></td>
         <td class="last_name"><?= $row["last_name"] ?></td>
-        <td class="email"><?= $row["email"] ?></td>
+        <td class="email"><?= $row["email"] ?></td>
         <td class="action">
-          <button id="logs">FCC Logs</button>
+          <button class="djlog">FCC Logs</button>
         </td>
       </tr>
     <?php endforeach; ?>      
