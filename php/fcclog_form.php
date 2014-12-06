@@ -11,7 +11,7 @@ include( 'hidden/pdo_connector.php' );
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-
+$success = FALSE;
 $showtime_pattern = '/((0?[1-9]|1[0-2])(\:[0-5][0-9])?(am|pm)?)\-((0?[1-9]|1[0-2])(\:[0-5][0-9])?(am|pm)?)/';
 $name_pattern     = '/[\w\s\-]*/';
 $readings_pattern = '/([a-zA-Z]|\d)*/';
@@ -143,8 +143,10 @@ try {
     <?php
         endif;
       endif;
+    if($success):
     ?>
     <h1>Thanks for Submitting!</h1>
     <h3> <a href="../html/fcclog_form.html">Submit Another</a></h3>
+    <?php endif;?>
   </body>
 </html>

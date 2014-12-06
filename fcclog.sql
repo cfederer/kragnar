@@ -11,7 +11,7 @@ CREATE TABLE fcclog (
   r_twentynine varchar(30) DEFAULT NULL,
   r_fortysix varchar(30) DEFAULT NULL,
   r_fiftyfive varchar(30) DEFAULT NULL,
-  notes varchar(100) DEFAULT NULL,
+  notes varchar(255) DEFAULT NULL,
   studentID int(7) NOT NULL,
   digital_signature varchar(35) DEFAULT NULL,
   foreign key (studentID) references dj(s_ID)
