@@ -1,6 +1,6 @@
 /*
  * Authors   => Callie Federer, Sean Hellebusch
- * Date      => 10.3.2014
+ * Date      => 12.5.2014
  * Version   => 1
  *
  * CSS for the KTRM DJ site
@@ -265,21 +265,10 @@ iframe {
   transition: all 0.3s;  
 }
 
-.first_name {
-  width: 18.75%;
-}
-
-.last_name {
-  width: 18.75%;
-}
-
-.email {
-  width: 37.5%;
-}
-
-.action {
-  width: 25%;
-}
+.first_name {width: 18.75%;}
+.last_name {width: 18.75%;}
+.email {width: 37.5%;}
+.action {width: 25%;}
 
 .logs {
   font-size: .8em;
@@ -325,61 +314,21 @@ iframe {
   transition: all 0.3s;  
 }
 
-.timestamp {
-  width: 12.5%;
-}
-
-.dj {
-  width: 10%;
-}
-
-.showtime  {
-  width: 5%;
-}
-
-.pavolts  {
-  width: 5%;
-}
-
-.paamps  {
-  width: 5%;
-}
-
-.fwrdpwr  {
-  width: 5%;
-}
-
-.reading {
-  width: 5%;
-}
-
-.reading0  {
-  width: 5%;
-}
-
-.reading1  {
-  width: 5%;
-}
-
-.reading2  {
-  width: 5%;
-}
-
-.reading3  {
-  width: 5%;
-}
-
-.reading4  {
-  width: 5%;
-}
+.timestamp {width: 12.5%;}
+.dj {width: 10%;}
+.showtime  {width: 5%;}
+.pavolts  {width: 5%;}
+.paamps  {width: 5%;}
+.fwrdpwr  {width: 5%;}
+.reading {width: 5%;}
+.reading0  {width: 5%;}
+.reading1  {width: 5%;}
+.reading2  {width: 5%;}
+.reading3  {width: 5%;}
+.reading4  {width: 5%;}
+.signature  {width: 12.5%;}
 
 .notes  {
   width: 14.1%;
   word-wrap: break-word;
 }
-
-.signature  {
-  width: 12.5%;
-}
-
-

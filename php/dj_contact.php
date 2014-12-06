@@ -67,14 +67,16 @@ try {
 
       <table id="dj" class="djs">
     <?php
+        $i = 0;
         foreach( $djs as $row ): 
+          $i++;
     ?>
       <tr>
         <td class="first_name"><?= $row["first_name"] ?></td>
         <td class="last_name"><?= $row["last_name"] ?></td>
         <td class="email"><?= $row["email"] ?></td>
         <td class="action">
-          <button class="djlog">FCC Logs</button>
+          <button class="djlog<?=$i?>">FCC Logs</button>
         </td>
       </tr>
     <?php endforeach; ?>      

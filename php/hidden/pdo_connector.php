@@ -10,10 +10,10 @@ class PDO_Connector {
     public function connect() {
         try {
             // Database login
-            $dbuser = 'hellebusch';
-            $dbpass = 'admin';
+            $dbuser = 'sah7817';
+            $dbpass = '40307817';
             // Connect to DB
-            $pdo = new PDO("mysql:host=Enterprise;dbname=test;charset=utf8", $dbuser, $dbpass);
+            $pdo = new PDO("mysql:host=borax.truman.edu;dbname=sah7817;charset=utf8", $dbuser, $dbpass);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
             return $pdo;
         } catch(PDOException $e) {
