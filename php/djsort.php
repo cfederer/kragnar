@@ -26,7 +26,7 @@ if(!preg_match($op_regex, $option)):
   exit();
 endif;
 
-$query = "SELECT first_name, last_name, email FROM dj ORDER BY " . $option;
+$query = "SELECT first_name, last_name, email FROM DJ ORDER BY " . $option;
 
 try {
   $stmnt = $pdo->prepare($query);
@@ -42,6 +42,6 @@ foreach( $djs as $row ):
     <td class="first_name"><?= $row["first_name"] ?></td>
     <td class="last_name"><?= $row["last_name"] ?></td>
     <td class="email"><?= $row["email"] ?></td>
-    <td class="action"><button>FCC Logs</button></td>
+    <td id="action"><button>FCC Logs</button></td>
   </tr>
 <?php endforeach; ?>

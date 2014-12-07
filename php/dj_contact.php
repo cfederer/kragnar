@@ -15,7 +15,7 @@ include( 'hidden/pdo_connector.php' );
 $connector = new PDO_Connector();
 $pdo = $connector->connect();
 
-$query = "SELECT first_name, last_name, email FROM dj;";
+$query = "SELECT first_name, last_name, email FROM DJ;";
 
 
 try {
@@ -76,7 +76,7 @@ try {
         <td class="last_name"><?= $row["last_name"] ?></td>
         <td class="email"><?= $row["email"] ?></td>
         <td class="action">
-          <button class="djlog<?=$i?>">FCC Logs</button>
+          <button id="djlog<?=$i?>">FCC Logs</button>
         </td>
       </tr>
     <?php endforeach; ?>      
