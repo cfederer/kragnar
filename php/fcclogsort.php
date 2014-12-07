@@ -26,7 +26,9 @@ if(!preg_match($op_regex, $option)):
   exit();
 endif;
 
-$query = "SELECT * FROM fcclog ORDER BY " . $option;
+$query = "SELECT timestamp, dj, showtime, pa_volts, pa_amps, fwrd_pwr, 
+            readings, r_zero, r_twelve, r_twentynine, r_fortysix, r_fiftyfive, 
+            notes, digital_signature FROM fcclog ORDER BY " . $option;
 
 try {
   $stmnt = $pdo->prepare($query);

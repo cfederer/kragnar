@@ -15,7 +15,9 @@ include( 'hidden/pdo_connector.php' );
 $connector = new PDO_Connector();
 $pdo = $connector->connect();
 
-$query = "SELECT * FROM fcclog;";
+$query = "SELECT timestamp, dj, showtime, pa_volts, pa_amps, fwrd_pwr, 
+            readings, r_zero, r_twelve, r_twentynine, r_fortysix, r_fiftyfive, 
+            notes, digital_signature FROM fcclog;";
 
 
 try {
